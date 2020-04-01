@@ -34,7 +34,7 @@ class Main extends CI_Controller {
 	
 		//the fields function lists attributes to see on add/edit forms.
 		//Note no inclusion of invoiceNo as this is auto-incrementing
-		$crud->fields('Animal_ID','Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Availability');
+		$crud->fields ('Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Availability');
 		
 		//set the foreign keys to appear as drop-down menus
 		// ('this fk column','referencing table', 'column in referencing table')
@@ -95,15 +95,12 @@ class Main extends CI_Controller {
 		$crud->set_theme('datatables');
 		$crud->set_table('owner');
 		$crud->set_subject('owner');
-		$crud->fields('Owner_ID', 'Given_Name', 'Family_Name', 'Mobile_Number');
+		$crud->fields('Given_Name', 'Family_Name', 'Mobile_Number');
 		$crud->required_fields('Owner_ID','Given_Name', 'Family_Name', 'Mobile_Number');
-		//$crud->set_relation('Animal_ID', 'animal', 'Animal_ID');
 		$crud->display_as('Owner_ID', 'Owner ID');
 		$crud->display_as('Given_Name', 'First Name');
 		$crud->display_as('Family_Name', 'Last Name');
 		$crud->display_as('Mobile_Number', 'Number');
-		//$crud->display_as('Animal_ID', 'Owned Animal');
-		
 		
 		$output = $crud->render();
 		$this->owner_output($output);
@@ -143,7 +140,7 @@ class Main extends CI_Controller {
 		$crud->set_theme('datatables');
 		$crud->set_table('trainee');
 		$crud->set_subject('trainee');
-		$crud->fields('Trainee_ID', 'Given_Name', 'Family_Name', 'Current_level');
+		$crud->fields('Given_Name', 'Family_Name', 'Current_level');
 		$crud->required_fields('Trainee_ID', 'Given_Name', 'Family_Name', 'Current_level');
 		$crud->display_as('Trainee_ID', 'Trainee ID');
 		$crud->display_as('Given_Name', 'First Name');
@@ -168,10 +165,10 @@ class Main extends CI_Controller {
 		$crud->set_subject('traineesinlesson');
 		$crud->fields('Trainee_ID', 'Lesson_No');
 		$crud->required_fields('Trainee_ID', 'Lesson_No');
-		$crud->set_relation('Trainee_ID','trainee', 'Trainee_ID');
-		$crud->set_relation('Lesson_No','vetlesson', 'Lesson_Number');
 		$crud->display_as('Trainee_ID', 'Trainee ID');
 		$crud->display_as('Lesson_No', 'Lesson Number');
+		$crud->set_relation('Trainee_ID','trainee', 'Trainee_ID');
+		$crud->set_relation('Lesson_No','vetlesson', 'Lesson_Number');
 		
 		$output = $crud->render();
 		$this->traineesinlesson_output($output);
