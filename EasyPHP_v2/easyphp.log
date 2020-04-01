@@ -559,3 +559,12 @@
 01/04 15:42:40 EasyPHP MySqlSutdown event = MySQLShutdown18720
 01/04 15:42:41 EasyPHP EasyPHP Stop the servers
 01/04 15:42:41 EasyPHP End EasyPHP...
+01/04 15:52:32 EasyPHP EasyPHP Servers starting
+01/04 15:52:35 EasyPHP Apache CreateProcess "C:\Users\james\DOCUME~1\GitHub\ANIMAL~1\EASYPH~1\binaries\apache\bin\eds-httpd.exe"
+01/04 15:52:35 EasyPHP CreateProcess "C:\Users\james\DOCUME~1\GitHub\ANIMAL~1\EASYPH~1\binaries\mysql\bin\eds-mysqld.exe --defaults-file="C:\Users\james\DOCUME~1\GitHub\ANIMAL~1\EASYPH~1\binaries\mysql\my.ini" --language=english"
+01/04 15:52:40 EasyPHP EasyPHP Check version
+01/04 16:23:26 EasyPHP EasyPHP Stop the servers
+01/04 16:23:26 EasyPHP Apache stop event: ap10196_shutdown
+01/04 16:23:27 EasyPHP MySqlSutdown event = MySQLShutdown18044
+01/04 16:23:28 EasyPHP ServerBase::TimerProc : GetProcessVersion Apache (pid: 10196) error 5
+01/04 16:23:30 EasyPHP ServerBase::TimerProc : GetProcessVersion MySQL (pid: 18044) error 5
