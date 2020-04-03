@@ -30,11 +30,11 @@ class Main extends CI_Controller {
 		$crud->set_subject('animal');
 		
 		//the columns function lists attributes you see on frontend view of the table
-		$crud->columns('Animal_ID', 'Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Availability');
+		$crud->columns('Animal_ID', 'Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Condition_Level', 'Availability');
 	
 		//the fields function lists attributes to see on add/edit forms.
 		//Note no inclusion of invoiceNo as this is auto-incrementing
-		$crud->fields('Animal_ID','Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Availability');
+		$crud->fields ('Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name','Availability');
 		
 		//set the foreign keys to appear as drop-down menus
 		// ('this fk column','referencing table', 'column in referencing table')
@@ -46,13 +46,16 @@ class Main extends CI_Controller {
 		//$crud->set_relation_n_n('Animal_ID','animal', 'Animal_ID');
 		//$crud->set_relation_n_n('Lesson_ID','vetlesson', 'Lesson_ID);
 		$crud->set_relation('Condition_Name','diagnosis', 'Condition_Name');
+		$crud->set_relation('Condition_Level','diagnosis', 'Condition_Level');
+		$crud->set_relation('Condition_Level','diagnosis', 'Condition_Level');
 		
 		//form validation (could match database columns set to "not null")
-		$crud->required_fields('Animal_ID', 'Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name');
+		$crud->required_fields('Animal_ID', 'Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Condition_Level');
 		
 		//change column heading name for readability ('columm name', 'name to display in frontend column header')
 		$crud->display_as('Animal_ID', 'Animal ID');
 		$crud->display_as('Condition_Name', 'Condition Name');
+		$crud->display_as('Condition_Level', 'Condition Level');
 		
 		$output = $crud->render();
 		$this->animal_output($output);
@@ -95,15 +98,13 @@ class Main extends CI_Controller {
 		$crud->set_theme('datatables');
 		$crud->set_table('owner');
 		$crud->set_subject('owner');
-		$crud->fields('Owner_ID', 'Given_Name', 'Family_Name', 'Mobile_Number');
-		$crud->required_fields('Owner_ID','Given_Name', 'Family_Name', 'Mobile_Number');
-		//$crud->set_relation('Animal_ID', 'animal', 'Animal_ID');
-		$crud->display_as('Owner_ID', 'Owner ID');
+		$crud->fields('Given_Name', 'Family_Name', 'Mobile_Number');
+		$crud->columns('Owner_Id','Given_Name', 'Family_Name', 'Mobile_Number');
+		$crud->required_fields('Owner_Id','Given_Name', 'Family_Name', 'Mobile_Number');
+		$crud->display_as('Owner_Id', 'Owner ID');
 		$crud->display_as('Given_Name', 'First Name');
 		$crud->display_as('Family_Name', 'Last Name');
 		$crud->display_as('Mobile_Number', 'Number');
-		//$crud->display_as('Animal_ID', 'Owned Animal');
-		
 		
 		$output = $crud->render();
 		$this->owner_output($output);
@@ -143,7 +144,7 @@ class Main extends CI_Controller {
 		$crud->set_theme('datatables');
 		$crud->set_table('trainee');
 		$crud->set_subject('trainee');
-		$crud->fields('Trainee_ID', 'Given_Name', 'Family_Name', 'Current_level');
+		$crud->fields('Given_Name', 'Family_Name', 'Current_level');
 		$crud->required_fields('Trainee_ID', 'Given_Name', 'Family_Name', 'Current_level');
 		$crud->display_as('Trainee_ID', 'Trainee ID');
 		$crud->display_as('Given_Name', 'First Name');
@@ -168,10 +169,10 @@ class Main extends CI_Controller {
 		$crud->set_subject('traineesinlesson');
 		$crud->fields('Trainee_ID', 'Lesson_No');
 		$crud->required_fields('Trainee_ID', 'Lesson_No');
-		$crud->set_relation('Trainee_ID','trainee', 'Trainee_ID');
-		$crud->set_relation('Lesson_No','vetlesson', 'Lesson_Number');
 		$crud->display_as('Trainee_ID', 'Trainee ID');
 		$crud->display_as('Lesson_No', 'Lesson Number');
+		$crud->set_relation('Trainee_ID','trainee', 'Trainee_ID');
+		$crud->set_relation('Lesson_No','vetlesson', 'Lesson_Number');
 		
 		$output = $crud->render();
 		$this->traineesinlesson_output($output);
@@ -189,13 +190,14 @@ class Main extends CI_Controller {
 		$crud->set_theme('datatables');
 		$crud->set_table('vetlesson');
 		$crud->set_subject('vetlesson');
-		$crud->fields('Lesson_Number', 'Lesson_Level', 'Lesson_Date', 'Lesson_Time', 'Offset_Cost');
-		$crud->required_fields('Lesson_Number', 'Lesson_Level', 'Lesson_Date', 'Lesson_Time', 'Offset_Cost');
+		$crud->fields('Lesson_Level', 'Lesson_Date', 'Lesson_Time', 'Offest_Cost');
+		$crud->columns('Lesson_Number','Lesson_Level', 'Lesson_Date', 'Lesson_Time', 'Offest_Cost');
+		$crud->required_fields('Lesson_Number', 'Lesson_Level', 'Lesson_Date', 'Lesson_Time', 'Offest_Cost');
 		$crud->display_as('Lesson_Number', 'Lesson Number');
 		$crud->display_as('Lesson_Level', 'Lesson Level');
 		$crud->display_as('Lesson_Date', 'Lesson Date');
 		$crud->display_as('Lesson_Time', 'Time');
-		$crud->display_as('Offset_Cost', 'Discount');
+		$crud->display_as('Offest_Cost', 'Discount');
 		
 		$output = $crud->render();
 		$this->vetlesson_output($output);
