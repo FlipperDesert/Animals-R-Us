@@ -471,3 +471,35 @@
 [Thu Apr 02 16:11:46.828365 2020] [mpm_winnt:notice] [pid 11120:tid 724] AH00422: Parent: Received shutdown signal -- Shutting down the server.
 [Thu Apr 02 16:11:48.838365 2020] [mpm_winnt:notice] [pid 15740:tid 720] AH00364: Child: All worker threads have exited.
 [Thu Apr 02 16:11:48.946053 2020] [mpm_winnt:notice] [pid 11120:tid 724] AH00430: Parent: Child process 15740 exited successfully.
+[Mon Apr 06 07:12:32.448286 2020] [mpm_winnt:notice] [pid 21596:tid 736] AH00455: Apache/2.4.7 (Win32) PHP/5.5.8 configured -- resuming normal operations
+[Mon Apr 06 07:12:32.448286 2020] [mpm_winnt:notice] [pid 21596:tid 736] AH00456: Apache Lounge VC11 Server built: Nov 21 2013 20:13:01
+[Mon Apr 06 07:12:32.448286 2020] [core:notice] [pid 21596:tid 736] AH00094: Command line: 'C:\\ANIMAL~1\\EASYPH~1\\binaries\\apache\\bin\\eds-httpd.exe -d C:/Animals-R-Us-master/EasyPHP_v2/binaries/apache'
+[Mon Apr 06 07:12:32.448286 2020] [mpm_winnt:notice] [pid 21596:tid 736] AH00418: Parent: Created child process 23796
+[Mon Apr 06 07:12:32.985773 2020] [mpm_winnt:notice] [pid 23796:tid 720] AH00354: Child: Starting 64 worker threads.
+[Mon Apr 06 07:18:10.386717 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 07:21:13.735784 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 07:21:33.947005 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:04:32.513845 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:05:05.016318 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:05:46.076870 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:12:01.826939 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:23:53.177500 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:29:57.115573 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:33:13.605758 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:35:39.684794 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:40:37.784777 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:44:55.761359 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:46:15.119213 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:49:03.871035 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:52:28.283748 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:53:11.729053 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:55:20.773236 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:58:30.708612 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 16:59:44.604547 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 17:04:14.210596 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 17:15:48.794170 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 17:18:22.490933 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 17:23:30.530477 2020] [mpm_winnt:warn] [pid 23796:tid 1716] (OS 64)The specified network name is no longer available.  : AH00341: winnt_accept: Asynchronous AcceptEx failed.
+[Mon Apr 06 17:24:36.204033 2020] [mpm_winnt:notice] [pid 21596:tid 736] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Mon Apr 06 17:24:38.226558 2020] [mpm_winnt:notice] [pid 23796:tid 720] AH00364: Child: All worker threads have exited.
+[Mon Apr 06 17:24:38.396693 2020] [mpm_winnt:notice] [pid 21596:tid 736] AH00430: Parent: Child process 23796 exited successfully.

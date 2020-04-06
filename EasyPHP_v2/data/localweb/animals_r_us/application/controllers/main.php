@@ -30,7 +30,7 @@ class Main extends CI_Controller {
 		$crud->set_subject('animal');
 		
 		//the columns function lists attributes you see on frontend view of the table
-		$crud->columns('Animal_ID', 'Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Condition_Level', 'Availability');
+		$crud->columns('Animal_ID', 'Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Availability');
 	
 		//the fields function lists attributes to see on add/edit forms.
 		//Note no inclusion of invoiceNo as this is auto-incrementing
@@ -46,16 +46,16 @@ class Main extends CI_Controller {
 		//$crud->set_relation_n_n('Animal_ID','animal', 'Animal_ID');
 		//$crud->set_relation_n_n('Lesson_ID','vetlesson', 'Lesson_ID);
 		$crud->set_relation('Condition_Name','diagnosis', 'Condition_Name');
-		$crud->set_relation('Condition_Level','diagnosis', 'Condition_Level');
-		$crud->set_relation('Condition_Level','diagnosis', 'Condition_Level');
+		//$crud->set_relation('Condition_Level','diagnosis', 'Condition_Level');
+		//$crud->set_relation('Condition_Level','diagnosis', 'Condition_Level');
 		
 		//form validation (could match database columns set to "not null")
-		$crud->required_fields('Animal_ID', 'Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name', 'Condition_Level');
+		$crud->required_fields('Animal_ID', 'Animal_Name', 'Owner_ID', 'Height', 'Weight', 'Condition_Name');
 		
 		//change column heading name for readability ('columm name', 'name to display in frontend column header')
 		$crud->display_as('Animal_ID', 'Animal ID');
 		$crud->display_as('Condition_Name', 'Condition Name');
-		$crud->display_as('Condition_Level', 'Condition Level');
+		//$crud->display_as('Condition_Level', 'Condition Level');
 		
 		$output = $crud->render();
 		$this->animal_output($output);
@@ -75,13 +75,17 @@ class Main extends CI_Controller {
 		
 		$crud->set_table('animalsinlesson');
 		$crud->set_subject('animalsinlesson');
-		$crud->columns('Animal_ID', 'Lesson_ID');
-		$crud->fields('Animal_ID', 'Lesson_ID');
-		$crud->required_fields('Animal_ID', 'Lesson_Id');
+		$crud->columns('Condition_Level','Animal_ID', 'Lesson_ID','Condition_Level');
+		$crud->fields('Condition_Level','Animal_ID', 'Lesson_ID');
+		$crud->required_fields('Condition_Level','Animal_ID', 'Lesson_Id');
+		$crud->set_relation('Condition_Level','diagnosis','Condition_Level');
 		$crud->set_relation('Animal_ID', 'Animal', 'Animal_ID');
 		$crud->set_relation('Lesson_ID', 'vetlesson', 'Lesson_Number');
+		
+		$crud->display_as('Condition_Level', 'Condition Level');
 		$crud->display_as('Vetlesson', 'Lesson');
 		$crud->display_as('animalsinlesson', 'Animals in lesson');
+		
 		
 		$output = $crud->render();
 		$this->animalsinlesson_output($output);
